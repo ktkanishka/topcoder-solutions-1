@@ -25,10 +25,9 @@ def construct_z_array_efficiently(string):
                 left = i
                 right = left + length - 1
         else:
-            j = i + min(right - i, z_array[i - left])
             k = min(right - i, z_array[i - left]) 
+            j = i + k
             length = 1 if string[k] == string[j] else 0
-            print 'j: {}, i: {}, right: {}, left: {},  {}, z_array[i - left]: {}'.format(j, i, right, left, string[:i], z_array[i - left])
             while j < len(string) and string[k] == string[j]:
                 j += 1
                 k += 1
