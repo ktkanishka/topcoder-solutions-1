@@ -1,0 +1,2 @@
+class AfraidOfEven(object):
+    pass
